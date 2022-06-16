@@ -92,8 +92,6 @@ nav .fa{
     display: flex;
     justify-content: center;
     height:4rem;
-    
-  
 }
 
 .nav-center input{
@@ -166,6 +164,24 @@ nav .fa{
     
 }
 
+.red-heart{
+    color:red;
+    animation-name:pumping;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    transition: all .2s linear;
+
+}
+
+@keyframes pumping {
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+}
+
 /*header ends here */
 
 main{
@@ -183,6 +199,7 @@ main{
     justify-content: center;
     align-items: center;
     color:white;
+    overflow-y:scroll;
     
 }
 
@@ -192,7 +209,7 @@ main{
 }
 
 .meal-details-right{
-    width:40%;
+    width:50%;
     height:60%;
     display: flex;
     justify-content: center;
@@ -204,6 +221,11 @@ main{
     animation-timing-function:ease-in-out;
 }
 
+.meal-details-right img{
+    height:80%;
+    width:70%;
+}
+
 @keyframes animate {
     0%,100%{
         transform: translateY(0);
@@ -212,7 +234,53 @@ main{
         transform: translateY(5%);
     }
 }
-.meal-details-right img{
+/* .meal-details-right img{
     height:40%;
     width:70%;
+} */
+
+
+@media only screen and (max-width:1000px){
+    .meal-details{
+        display:flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        font-size:2vmin !important;
+    }
+
+    .meal-details-left{
+        width:100%;
+    }
+    
+    .meal-details-left h2{
+        padding:1rem 0 0 0!important;
+    }
+    .meal-details-right{
+        width:100%;
+    }
+
+    .meal-details-right img{
+        width:90%;
+    }
+
+    .strMeal{
+        font-size:5vmin !important;
+    }
+
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .nav-left{
+        font-size: 1vmin !important;
+        width:30%;
+    }
+
+    .nav-left img{
+        height:90% !important;
+        width:10rem;
+    }
 }

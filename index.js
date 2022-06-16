@@ -108,7 +108,7 @@ function str(img, name, id) {
                 <div style="display:none;">${id}</div>
                 <img class="search-results-img" height=100 width=100 src="${img}">
                 <h2>${name}</h2>
-               <i class="fa fa-heart red-heart"></i>
+               <i class="fa fa-heart fa-3x red-heart"></i>
                 </li>`
             }
         }

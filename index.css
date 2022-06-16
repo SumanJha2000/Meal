@@ -9,6 +9,8 @@
     font-weight:500;
     outline: none;
     border:none;
+    /* color:white; */
+    box-sizing: border-box;
 }
 
 html{
@@ -16,14 +18,13 @@ html{
 }
 
 body{
-    background-color: aliceblue;
+    background-color: black;
 }
 
 header{
     height:10vh;
     width:100vw;
     color:white;
-    background-color: rgb(167, 217, 234);
 }
 
 nav{
@@ -60,7 +61,9 @@ nav .fa{
 .nav-left img{
     height:90%;
     width:7rem;
-    border-radius:100%
+    border-radius:100%;
+    border:2px solid white;
+    cursor: pointer;
 }
 
 .nav-left a{
@@ -89,6 +92,7 @@ nav .fa{
     display: flex;
     justify-content: center;
     height:4rem;
+    
   
 }
 
@@ -99,6 +103,7 @@ nav .fa{
     padding-left:.4rem;
     margin-top:.4rem;
     padding-bottom:.3rem;
+    color:black !important;
 }
 
 .nav-center button{
@@ -116,11 +121,11 @@ nav .fa{
 .search-suggestions{
     /* width:100%; */
     max-height:20rem;
-    color:black;
+    color:black!important;
     font-size:2rem;
     width:100%;
     overflow-y: scroll;
-    background-color:rgb(223, 242, 242);
+    
 }
 
 .hide-suggestions{
@@ -137,6 +142,8 @@ nav .fa{
     justify-content: flex-start;
     align-items: center;
     padding-left:.7rem;
+    color:grey;
+    cursor: pointer;
 }
 
 .nav-right{
@@ -149,6 +156,7 @@ nav .fa{
 
 .nav-right a{
     font-size:1.6rem;
+    color:white;
 }
 
 
@@ -159,7 +167,6 @@ nav .fa{
 main{
     min-height:90vh;
     width:100vw;
-    background-color:beige ;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -180,7 +187,18 @@ main{
     width: 20%;
     height:28rem;
     margin:2rem 2rem;
-    background-color: rgb(195, 225, 225);
+    background-color:white;
+    border:3px solid transparent;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.search-results-li:hover{
+    box-shadow: 7px 7px 9px grey;
+    transform: scale(1.1);
+    transition:all .2s linear;
+    border:3px solid white;
 }
 
 .search-results-img{
@@ -188,8 +206,31 @@ main{
     width:100%;
 }
 
+.search-results-li h2{
+    margin-top:.5rem;
+}
+
+.fa-heart{
+    margin-top:.3rem;
+    color:grey;
+}
+
 .red-heart{
     color:red;
+    animation-name:pumping;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    transition: all .2s linear;
+
+}
+
+@keyframes pumping {
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
 }
 
 

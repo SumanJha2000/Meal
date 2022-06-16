@@ -11,6 +11,8 @@ window.addEventListener("load", function (e) {
             <p style="padding:0rem 1rem 0 2rem;font-size:1.3rem">${data.meals[0].strInstructions}</p>
             <h2 style="padding:3rem 1rem 0 2rem;color:blue" >Category :</h2>
             <p style="padding:0rem 1rem 0 2rem;font-size:1.6rem;color:purple">${data.meals[0].strCategory}</p>
+            <h2 style="padding:3rem 1rem 0 2rem;color:blue" >Country :</h2>
+            <p style="padding:0rem 1rem 0 2rem;font-size:1.6rem;color:purple">${data.meals[0].strArea}</p>
             <h2 style="padding:3rem 1rem 0 2rem;color:blue" >Youtube Tutorial :</h2>
             <p style="padding:0rem 1rem 0 2rem;"><a href=${data.meals[0].strYoutube}>${data.meals[0].strYoutube}</a></p>
            

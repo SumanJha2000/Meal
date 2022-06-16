@@ -1,4 +1,4 @@
-var favouritesContainer = document.querySelector('.favourites-container');
+var favouritesContainer = document.querySelector('.search-results-container');
 // var favouritesBtn = document.querySelector('.fa-heart');
 var favourites = [];
 if (JSON.parse(sessionStorage.getItem('favourites')) != null) {
@@ -9,11 +9,11 @@ function displayFavourites(favourites) {
     favouritesContainer.innerHTML = '';
     for (var i = 0; i < favourites.length; i++) {
         console.log(favourites[i]);
-        favouritesContainer.innerHTML += ` <li>
+        favouritesContainer.innerHTML += ` <li class="search-results-li">
         <div style="display:none;">${favourites[i].id}</div>
-        <img class="img-container search-results-img" width=100 height=100 src="${favourites[i].img}"/>
+        <img class="search-results-img" width=100 height=100 src="${favourites[i].img}"/>
         <h2>${favourites[i].name}</h2>
-        <i class="fa fa-heart fa-2x red-heart"></i>
+        <i class="fa fa-heart fa-3x red-heart"></i>
     </li>`;
     }
 

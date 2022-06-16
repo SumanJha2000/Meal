@@ -16,14 +16,13 @@ html{
 }
 
 body{
-    background-color: aliceblue;
+    background-color: black;
 }
 
 header{
     height:10vh;
-    width:100Vw;
+    width:100vw;
     color:white;
-    background-color: rgb(242, 152, 188);
 }
 
 nav{
@@ -32,6 +31,7 @@ nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
     /* background-color:rgb(197, 230, 230); */
 }
 
@@ -59,7 +59,9 @@ nav .fa{
 .nav-left img{
     height:90%;
     width:7rem;
-    border-radius:100%
+    border-radius:100%;
+    border:2px solid white;
+    cursor: pointer;
 }
 
 .nav-left a{
@@ -68,25 +70,78 @@ nav .fa{
 }
 
 .nav-center{
-    width:60%;
-    height:100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-   
+    flex-direction: column;
+    width:30%;
+    position:absolute;
+    top:2rem;
+    left:36%;
+    background-color: white;
+    border-radius:5px;
 }
 
 .nav-center .fa-search{
     font-size:1.7rem;
-    margin:.3rem 1rem;
+    text-align: center;
+}
+
+.nav-center .input-div{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    height:4rem;
+    
+  
 }
 
 .nav-center input{
-    height:40%;
-    width:40%;
+    height:3.3rem;
+    width:90%;
     font-size:1.6rem;
-    padding:.2rem;
+    padding-left:.4rem;
+    margin-top:.4rem;
+    padding-bottom:.3rem;
+    color:black !important;
+}
+
+.nav-center button{
+    padding:.3rem;
+    text-align: center;
+    height:3.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:6.2rem;
+    background-color: transparent;
+
+}
+
+.search-suggestions{
+    /* width:100%; */
+    max-height:20rem;
+    color:black!important;
+    font-size:2rem;
+    width:100%;
+    overflow-y: scroll;
+    
+}
+
+.hide-suggestions{
+    display:none;
+    transition:all .5s ease-in-out;
+}
+
+.search-suggestions h6{
+    width:100%;
+    height:3.5rem;
+    margin-top:.4rem;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left:.7rem;
+    color:grey;
+    cursor: pointer;
 }
 
 .nav-right{
@@ -99,6 +154,7 @@ nav .fa{
 
 .nav-right a{
     font-size:1.6rem;
+    color:white;
 }
 
 
@@ -106,54 +162,72 @@ nav .fa{
 
 
 
+/*main starts here */
 main{
-    height:90vh;
+    min-height:90vh;
     width:100vw;
-    background-color:beige ;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-.favourites-container{
+.search-results-container{
     min-height:70vh;
     width:80vw;
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
     flex-wrap: wrap;
-    overflow: hidden;
+    margin-top:8rem;
 }
 
-.favourites-container li{
+.search-results-li{
     width: 20%;
-    margin-top:3rem;
-    position: relative;
-    height:24rem;
-    margin:2rem;
-    background-color: paleturquoise;
-    
+    height:28rem;
+    margin:2rem 2rem;
+    background-color:white;
+    border:3px solid transparent;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-align: center;
 }
 
-.favourites-container li button{
-    position:absolute;
-    top:0;
-    left:62%;
-    height:4rem;
-    width:5rem;
-    background-color: transparent;
+.search-results-li:hover{
+    box-shadow: 7px 7px 9px grey;
+    transform: scale(1.1);
+    transition:all .2s linear;
+    border:3px solid white;
+}
+
+.search-results-img{
+    height:70%;
+    width:100%;
+}
+
+.search-results-li h2{
+    margin-top:.5rem;
 }
 
 .fa-heart{
-    color:white;
-}
-
-.img-container{
-    height:80%!important;
-    width:100%;
+    margin-top:.3rem;
+    color:grey;
 }
 
 .red-heart{
     color:red;
+    animation-name:pumping;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    transition: all .2s linear;
+
+}
+
+@keyframes pumping {
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
 }

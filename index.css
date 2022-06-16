@@ -18,7 +18,9 @@ html{
 }
 
 body{
-    background-color: black;
+    background-image: url(assets/pizza.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header{
@@ -69,6 +71,7 @@ nav .fa{
 .nav-left a{
     font-size: 1.4rem;
     margin:0 .2rem;
+    height:100%;
 }
 
 .nav-center{
@@ -157,8 +160,15 @@ nav .fa{
 .nav-right a{
     font-size:1.6rem;
     color:white;
+    transition:all .3s ease;
 }
 
+.nav-right a:hover{
+    font-size:1.6rem; 
+    color:red;
+    font-weight: bold;
+    
+}
 
 /*header ends here */
 
@@ -174,7 +184,7 @@ main{
 }
 
 .search-results-container{
-    min-height:70vh;
+    min-height:100%;
     width:80vw;
     display: flex;
     justify-content: flex-start;

@@ -17,7 +17,9 @@ html{
 }
 
 body{
-    background-color: black;
+    background-image: url(assets/pizza.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header{
@@ -58,7 +60,7 @@ nav .fa{
 }
 
 .nav-left img{
-    height:90%;
+    height:95%;
     width:8rem;
     border-radius:100%;
     border:2px solid white;
@@ -71,15 +73,21 @@ nav .fa{
     height:100%;
 }
 
+.nav-right a:hover{
+    font-size:1.6rem; 
+    color:red;
+    font-weight: bold;
+    
+}
+
 .nav-center{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width:30%;
-    position:absolute;
-    top:2rem;
-    left:36%;
-    background-color: white;
-    border-radius:5px;
+    font-size: 2rem;
+    color:rgb(209, 175, 175);
+    
 }
 
 .nav-center .fa-search{
@@ -166,7 +174,7 @@ nav .fa{
 
 /*main starts here */
 main{
-    height:90vh;
+    min-height:90vh;
     width:100vw;
     display: flex;
     flex-direction: column;
@@ -175,13 +183,14 @@ main{
 }
 
 .search-results-container{
-    min-height:70vh;
-    width:80vw;
+    width:80%;
+    min-height:100%;
     display: flex;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
     flex-wrap: wrap;
-    margin-top:8rem;
+    margin-top:4rem;
+    
 }
 
 .search-results-li{
@@ -205,10 +214,6 @@ main{
 .search-results-img{
     height:70%;
     width:100%;
-}
-
-.search-results-li h2{
-    /* margin-top:.5rem; */
 }
 
 .fa-heart{

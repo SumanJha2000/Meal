@@ -9,6 +9,7 @@
     font-weight:500;
     outline: none;
     border:none;
+    box-sizing: border-box;
 }
 
 html{

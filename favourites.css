@@ -9,6 +9,7 @@
     font-weight:500;
     outline: none;
     border:none;
+    box-sizing: border-box;
 }
 
 html{
@@ -164,7 +165,7 @@ nav .fa{
 
 /*main starts here */
 main{
-    min-height:90vh;
+    height:90vh;
     width:100vw;
     display: flex;
     flex-direction: column;
@@ -206,7 +207,7 @@ main{
 }
 
 .search-results-li h2{
-    margin-top:.5rem;
+    /* margin-top:.5rem; */
 }
 
 .fa-heart{

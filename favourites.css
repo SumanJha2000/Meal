@@ -177,9 +177,9 @@ main{
     min-height:90vh;
     width:100vw;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    
 }
 
 .search-results-container{
@@ -188,9 +188,7 @@ main{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top:4rem;
-    
+    flex-wrap: wrap; 
 }
 
 .search-results-li{
@@ -205,7 +203,7 @@ main{
 }
 
 .search-results-li:hover{
-    box-shadow: 7px 7px 9px grey;
+    box-shadow: 4px 4px 9px rgb(181, 179, 179);
     transform: scale(1.1);
     transition:all .2s linear;
     border:3px solid white;

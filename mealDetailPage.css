@@ -164,6 +164,10 @@ nav .fa{
     
 }
 
+.fa-heart{
+    margin-right:2rem;
+}
+
 .red-heart{
     color:red;
     animation-name:pumping;

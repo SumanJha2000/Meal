@@ -246,6 +246,10 @@ main{
     .search-results-li{
         min-width:27%!important;
     }
+
+    .fa-heart{
+        margin-right:2rem;
+    }
 }
 
 /* MEDIA WIDTH 800PX */
@@ -307,4 +311,6 @@ main{
     .nav-center input{
         width:80%;
     } 
+
+    
 }

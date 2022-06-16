@@ -8,7 +8,7 @@ window.addEventListener("load", function (e) {
             imgContainer.innerHTML += `<div class="meal-details-left">
             <h1  class="strMeal" style="font-size:4rem;padding:3rem 0 0 2rem;">${data.meals[0].strMeal}</h1>
             <h2 style="padding:3rem 1rem 0 2rem;color:blue" >Instructions :</h2>
-            <p style="padding:0rem 1rem 0 2rem;font-size:1.3rem;max-height:10rem;overflow-y:scroll;">${data.meals[0].strInstructions}</p>
+            <p style="padding:0rem 1rem 0 2rem;font-size:1.3rem;max-height:28.5%;overflow-y:scroll;">${data.meals[0].strInstructions}</p>
             <h2 style="padding:3rem 1rem 0 2rem;color:blue" >Category :</h2>
             <p style="padding:0rem 1rem 0 2rem;font-size:1.6rem;color:white">${data.meals[0].strCategory}</p>
             <h2 style="padding:3rem 1rem 0 2rem;color:blue" >Country :</h2>

@@ -250,7 +250,7 @@ main{
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        font-size:2vmin !important;
+        font-size:1.5vmin !important;
     }
 
     .meal-details-left{
@@ -279,12 +279,23 @@ main{
     }
 
     .nav-left{
-        font-size: 1vmin !important;
+        font-size: 2vmin !important;
         width:30%;
+        
+    }
+
+    .nav-left a{
+        font-size:2.5vmin !important;
     }
 
     .nav-left img{
         height:90% !important;
         width:10rem;
+    }
+    
+   
+
+    .fa-heart{
+        font-size:2rem!important;
     }
 }

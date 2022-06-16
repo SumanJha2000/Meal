@@ -250,6 +250,10 @@ main{
     .fa-heart{
         margin-right:2rem;
     }
+
+    .fa-heart{
+        font-size:2rem!important;
+    }
 }
 
 /* MEDIA WIDTH 800PX */

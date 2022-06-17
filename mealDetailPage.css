@@ -153,8 +153,14 @@ nav .fa{
 }
 
 .nav-right a{
-    font-size:1.6rem;
     color:white;
+    transition:all .3s ease;
+    height:100%;
+    width: 100%;
+}
+
+.nav-right .red-heart{
+    font-size:3rem !important;
 }
 
 .nav-right a:hover{

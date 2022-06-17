@@ -254,7 +254,7 @@ main{
         width: 40% !important;
         height:28rem;
         margin-top:3rem;
-        margin-right:1rem;
+        /* margin-right:1rem; */
 
         
     }
@@ -273,7 +273,7 @@ main{
         width: 90%!important;
         height:28rem;
         margin-top:3rem;
-        margin-right:1rem;
+        /* margin-right:1rem; */
     }
     
     .nav-left{

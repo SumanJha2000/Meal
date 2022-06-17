@@ -138,6 +138,7 @@ main{
     
 }
 
+
 .search-results-container{
     width:80%;
     min-height:100%;
@@ -175,6 +176,9 @@ main{
     color:grey;
     margin-right:2rem;
 }
+
+
+/*Red heart */
 
 .red-heart{
     color:red;

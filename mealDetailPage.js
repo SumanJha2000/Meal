@@ -1,3 +1,8 @@
+
+
+
+/*Call the function to display the meals and its properties onload of this page 
+"id" will be taken from sessionStorage */
 window.addEventListener("load", function (e) {
     var id = sessionStorage.getItem('id');
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php/?i=${id}`)
@@ -23,5 +28,4 @@ window.addEventListener("load", function (e) {
 
         })
         .catch(err => console.log(err));
-    // this.sessionStorage.removeItem('id');
 })

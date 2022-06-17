@@ -23,6 +23,7 @@ body{
     background-size: cover;
 }
 
+/*header Starts herer */
 header{
     height:10vh;
     width:100vw;
@@ -169,10 +170,8 @@ nav .fa{
 .nav-right .red-heart{
     font-size:3rem !important;
 }
-
-
-
 /*header ends here */
+
 
 
 /*main starts here */
@@ -184,6 +183,7 @@ main{
 
 }
 
+/*Search resulst container to display elements received from api and display inside */
 .search-results-container{
     min-height:100%;
     width:80vw;
@@ -236,6 +236,7 @@ main{
 
 }
 
+/* animation for red-heart */
 @keyframes pumping {
     0%,100%{
         transform:scale(1);
@@ -244,6 +245,12 @@ main{
         transform: scale(1.3);
     }
 }
+
+
+
+/* MULTIPLE MEDIA QUERIES FOR MULTIPLE SCREEN SIZE */
+
+
 
 /*MEDIA WIDTH 1000PX */
 @media only screen and (max-width:1000px) {

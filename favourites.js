@@ -1,10 +1,14 @@
+//Accessing Elements for usage 
 var favouritesContainer = document.querySelector('.search-results-container');
-// var favouritesBtn = document.querySelector('.fa-heart');
+
+//Favourites array to put values received from sessionStorag
 var favourites = [];
 if (JSON.parse(sessionStorage.getItem('favourites')) != null) {
     favourites = [...JSON.parse(sessionStorage.getItem('favourites'))];
 }
 
+
+//Display favourites  insides favourites Container 
 function displayFavourites(favourites) {
     favouritesContainer.innerHTML = '';
     for (var i = 0; i < favourites.length; i++) {
@@ -19,8 +23,11 @@ function displayFavourites(favourites) {
 
 }
 
+//Calling the display favourites function;
 displayFavourites(favourites);
 
+
+//Removing from favourites list on clicking on red-heart 
 favouritesContainer.addEventListener('click', function (e) {
     console.log('hellow');
     if (e.target.classList.contains('fa-heart')) {
@@ -41,12 +48,16 @@ favouritesContainer.addEventListener('click', function (e) {
             var elm = e.target.parentElement.children[0].innerText;
             favourites.push(obj)
         }
+        //Displaying the updated favourties after removal ;
         displayFavourites(favourites);
+
+        //Storing the updated favourites;
         sessionStorage.setItem('favourites', JSON.stringify(favourites));
     }
 })
 
 
+//on click on the image of the elements in favourites container  redirect to meal Details page
 favouritesContainer.addEventListener('click', function (e) {
     if (e.target.classList.contains("search-results-img")) {
         var value = e.target.parentElement.children[0].innerText;

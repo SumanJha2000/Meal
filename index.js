@@ -1,4 +1,4 @@
-
+//Acesssing elements to use
 var searchButton = document.querySelector("button");
 var input = document.querySelector("input");
 var main = document.querySelector("main");
@@ -6,16 +6,17 @@ var searchResultContainer = document.querySelector(".search-results-container");
 var searchSuggestions = document.querySelector(".search-suggestions");
 var favouritesBtn = document.querySelector('.fa-heart');
 
+//stores the result from fetch request to display on home page
 var res = [];
+
+//fvaourites array to store and maintain the favourite meals in session storage to further 
+//use by favourites.html page
 var favourites = [];
+
+//if some value in session storage then put it in favourites array;
 if (JSON.parse(sessionStorage.getItem('favourites') != null)) {
     favourites = [...JSON.parse(sessionStorage.getItem("favourites"))];
 }
-
-
-
-
-
 
 //On Clicking Search Bar 
 searchButton.addEventListener('click', function (e) {
@@ -31,7 +32,7 @@ searchButton.addEventListener('click', function (e) {
         .catch(err => console.log(err));
 })
 
-//On Typing Input value
+//On Typing Input value call for api with first letter of typed word
 input.addEventListener('input', function (e) {
     var value = e.target.value;
     if (value.length == 0) {

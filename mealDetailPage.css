@@ -194,6 +194,8 @@ nav .fa{
 
 /*header ends here */
 
+
+/*main starts here */
 main{
     height:90vh;
     width:100vw;
@@ -243,12 +245,10 @@ main{
         transform: translateY(5%);
     }
 }
-/* .meal-details-right img{
-    height:40%;
-    width:70%;
-} */
 
+/* MAIN ENDS HERE */
 
+/*MEDIA QUERY FOR SCREEN SIZE 1000PX */
 @media only screen and (max-width:1000px){
     .meal-details{
         display:flex;

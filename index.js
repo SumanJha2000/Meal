@@ -20,7 +20,9 @@ if (JSON.parse(sessionStorage.getItem('favourites') != null)) {
 
 //On Clicking Search Bar 
 searchButton.addEventListener('click', function (e) {
+    searchResultContainer.innerHTML = '';
     var value = input.value;
+
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`)
         .then(response => response.json())
         .then(data => {
@@ -79,7 +81,7 @@ searchSuggestions.addEventListener('click', function (e) {
 })
 
 
-//searchResultsContainer Img Click;
+//searchResultsContainer Img Click redirect to that meal details page;
 searchResultContainer.addEventListener('click', function (e) {
     if (e.target.classList.contains("search-results-img")) {
         var value = e.target.parentElement.children[0].innerText;

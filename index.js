@@ -23,12 +23,15 @@ searchButton.addEventListener('click', function (e) {
     searchResultContainer.innerHTML = '';
     var value = input.value;
 
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`)
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${value[0].toUpperCase()}`)
         .then(response => response.json())
         .then(data => {
             res = [...data.meals];
             for (var i = 0; i < res.length; i++) {
-                searchResultContainer.innerHTML += str(res[i].strMealThumb, res[i].strMeal, res[i].idMeal);
+                if (res[i].strMeal.startsWith(value[0].toUpperCase() + value.slice(1))) {
+                    // console.log(res[i].strmeal)
+                    searchResultContainer.innerHTML += str(res[i].strMealThumb, res[i].strMeal, res[i].idMeal);
+                }
             }
         })
         .catch(err => console.log(err));
@@ -51,7 +54,7 @@ input.addEventListener('input', function (e) {
                 return;
             }
             res = [...data.meals];
-            console.log(res);
+            // console.log(res);
             var c = 0;
             value = value.toLowerCase();
             for (var i = 0; i < res.length; i++) {
@@ -103,7 +106,7 @@ main.addEventListener('mouseout', function (e) {
 
 //function to add string in searchResultContainer.innerHtml;
 function str(img, name, id) {
-    console.log(id);
+
     if (favourites != null) {
         for (var i = 0; i < favourites.length; i++) {
             if (favourites[i].id == id) {

@@ -260,6 +260,18 @@ main{
         min-width:27%!important;
     }
 
+    .nav-center {
+        width:45%;
+        margin: 0 !important;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        top:1rem;
+        
+    }
+
+  
+
 }
 
 /* MEDIA WIDTH 800PX */
@@ -277,6 +289,11 @@ main{
 
     .nav-center {
         width:45%;
+        margin: 0 !important;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        top:1rem;
     }
 
     .nav-right{
@@ -313,7 +330,8 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top:2rem;
+        top:2rem;
+        /* margin-top:2rem; */
       
     }
 

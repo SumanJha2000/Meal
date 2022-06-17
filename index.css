@@ -266,7 +266,7 @@ main{
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        top:1rem;
+        top:4rem;
         
     }
 
@@ -293,7 +293,7 @@ main{
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        top:1rem;
+        top:3rem;
     }
 
     .nav-right{
@@ -314,6 +314,7 @@ main{
         height:28rem;
         margin-top:3rem;
     }
+
     
     .nav-left{
         font-size: 1vmin !important;
@@ -330,14 +331,83 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
-        top:2rem;
-        /* margin-top:2rem; */
-      
+        top:5rem;
+        /* margin-top:4rem; */
     }
 
     .nav-right{
         width:10%;
         color:red;
+    }
+
+    .nav-right a{
+        height:100%;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -1.5rem;
+        
+    }
+
+    .nav-center input{
+        width:80%;
+    } 
+
+    .fa-heart{
+        font-size:3rem;
+    }
+
+    
+}
+
+
+
+@media only screen and (max-width:400px){
+
+    html{
+        font-size: 40%;
+    }
+
+    .search-results-li{
+        width: 85%!important;
+        height:28rem;
+        margin-top:3rem;
+    }
+
+    
+    .nav-left{
+        font-size: 1vmin !important;
+        width:30%;
+    }
+
+    .nav-left img{
+        height:90% !important;
+        width:10rem;
+    }
+
+    .nav-center{
+        width:50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top:3rem;
+        /* margin-top:4rem; */
+    }
+
+    .nav-right{
+        width:10%;
+        color:red;
+    }
+
+    .nav-right a{
+        height:100%;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -1.5rem;
+        
     }
 
     .nav-center input{

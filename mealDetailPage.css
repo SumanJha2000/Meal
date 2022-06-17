@@ -219,6 +219,29 @@ main{
     height:100%;
 }
 
+.meal-details-left h1{
+    font-size:2rem;
+    margin:3rem 0 0 2rem;
+}
+
+.meal-details-left h2{
+   color:blue;
+   padding:3rem 1rem 0rem 2rem;
+}
+
+.meal-details-left p{
+    padding:0 1rem 0 2rem;
+    color:white;
+    font-size:1rem;
+
+}
+
+.meal-details-left .instructions{
+    max-height:20%;
+    overflow-y: scroll;
+}
+
+
 .meal-details-right{
     width:50%;
     height:60%;
